@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css end -->
+    <!-- daisy uli -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy uli end -->
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="border-b sticky top-0 z-50">
+      <div class="bg-[#f9f7f3]">
+        <div class="navbar container mx-auto py-5 ">
+          <div class="navbar-start">
+            <a href="../index.html">
+              <button
+                class="btn px-5 md:px-8 font-bold bg-[#B4F461] hover:bg-[#B4F461]"
+              >
+                Home
+              </button>
+            </a>
+          </div>
+          <div
+            class="navbar-center flex justify-center flex-col md:flex-row items-center"
+          >
+            <img src="../assets/logo.png" class="w-8" alt="" srcset="" />
+            <h1 class="font-semibold hidden md:block px-2 md:text-xl">
+              Donate Bangladesh
+            </h1>
+          </div>
+          <div class="navbar-end">
+            <button class="flex items-center md:space-x-2 font-semibold">
+              <img src="../assets/coin.png" alt="" srcset="" />
+              <span id="myBalance" class="px-1">10500</span> BDT
+            </button>
+          </div>
+        </div>
+      </div>
+<!--       
+      <div
+        class="backdrop-blur-sm bg-white/25 flex pt-4 pb-4 md:py-6 justify-center items-center space-x-5"
+      >
+        <button
+          id="Donation"
+          class="btn md:px-10 bg-[#B4F461] hover:bg-[#bffe6b] font-semibold text-lg tracking-wide"
+        >
+          Donation
+        </button>
+        <button
+          id="History"
+          class="btn md:px-10  border-gray-300 font-semibold text-lg tracking-wide"
+        >
+          History
+        </button>
+      </div> -->
+    </header>
+
+    <main class="container min-h-[74vh]  p-2  mx-auto mt-5">
+      <h1 class="text-3xl md:text-4xl flex items-center font-bold">Important FAQ <img src="../assets/speech-bubble.gif" class="w-16" alt="" srcset="">  </h1>
+      
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300 rounded-md rounded-b-none border"
+      >
+        <div class="collapse-title text-xl font-medium">
+          1. What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is like a map of a web page. It turns the page into a tree of objects that JavaScript can use to change how the page looks and works. This (DOM) make web pages interactive and dynamic.</p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300  rounded-none border"
+      >
+        <div class="collapse-title text-xl font-medium">
+          2. How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>Selecting an element from the DOM (Document Object Model) can be done using many methods in JavaScript.here are the some ways
+            <ul>
+              <li>1.By ID</li>
+              <li>2.By Class Name</li>
+              <li> 3.By Tag Name</li>
+              <li>4.By CSS Selector <br>
+                *Single Element by querySelector it give us fast element <br>
+                *Multiple Elements querySelectorAll it give us all element of this class</li>
+              <li> 5.By Name Attribute</li>
+            </ul>
+            
+            
+           
+            
+           
+
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300  rounded-none border"
+      >
+        <div class="collapse-title text-xl font-medium">
+          3. What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique where I add a single event listener to a parent element instead of multiple listeners to each child element. the parent element then handles events for all its children.
+            <br>
+            It’s Useful because
+Fewer Listeners <br>
+Handles New Elements <br>
+Cleaner Code 
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border-base-300 rounded-none rounded-b-md border"
+      >
+        <div class="collapse-title text-xl font-medium">
+          4. How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>Manipulating an element’s attributes and styles using the DOM can be done in many ways. Here are some  methods: <br>
+
+            Get Attribute:
+           
+            
+            const element = document.getElementById("myElement");
+            const value = element.getAttribute("attributeName");
+
+            <br>
+            Set Attribute:
+
+            element.setAttribute("attributeName", "AttributeNewValue");
+            <br>
+            Remove Attribute
+          
+            
+            element.removeAttribute("attributeName");
+          </p>
+        </div>
+      </div>
+
+
+    </main>
+    <footer class="bg-orange-50 h-12 " ></footer>
+  </body>
+</html>
