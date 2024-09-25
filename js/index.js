@@ -1,33 +1,29 @@
 
 const DonationBtn = document.getElementById("Donation");
 const HistoryBtn = document.getElementById("History");
-const boxContant = document.getElementById("boxContant");
+const boxContants = document.getElementById("box-contants");
 const showDonationHistory = document.getElementById("showDonationHistory");
 let myBalance = parseInt(document.getElementById("myBalance").innerText);
 const feniDonatioamount = parseInt(
-  document.getElementById("feniDonateAmount").innerText
+  document.getElementById("feniDonatioamount").innerText
 );
 const quotaMovementAmount = parseInt(
   document.getElementById("quotaMovementAmount").innerText
 );
 
-
-
-// common function
+// common functions start
 
 function getInputValue(id) {
-const values = document.getElementById(id).value
-    if (!isNaN(values) && values !== '') {
-      return parseInt(values) 
-    }
+  const values = document.getElementById(id).value;
+  if (!isNaN(values) && values !== "") {
+    return parseInt(values);
+  }
 }
 
 function modalopen() {
-  const Modal = document.getElementById("modal_1");
+  const Modal = document.getElementById("my_modal_1");
   Modal.showModal();
 }
-
-
 
 function createElementFun(amount, DonationTitle) {
   const div = document.createElement("div");
@@ -36,13 +32,13 @@ function createElementFun(amount, DonationTitle) {
           <h1 class="font-semibold">${amount} Taka is ${DonationTitle}</h1>
           <p class="bg-blue-50 p-2 mt-2 rounded-lg">Date: ${new Date()}</p>
           </div>`;
-          return div
+  return div;
 }
 // common function end
 
-// two button functionnality
+// buttons
 HistoryBtn.addEventListener("click", function () {
-  boxContant.classList.add("hidden");
+  boxContants.classList.add("hidden");
   HistoryBtn.classList.add("bg-[#B4F461]");
   HistoryBtn.classList.add("hover:bg-[#bffe6b]");
   HistoryBtn.classList.remove("border-gray-300");
@@ -51,10 +47,9 @@ HistoryBtn.addEventListener("click", function () {
   DonationBtn.classList.remove("hidden");
   DonationBtn.classList.add("border-gray-300");
   showDonationHistory.classList.remove("hidden");
-
 });
 DonationBtn.addEventListener("click", function () {
-  boxContant.classList.remove("hidden");
+  boxContants.classList.remove("hidden");
   HistoryBtn.classList.remove("bg-[#B4F461]");
   DonationBtn.classList.add("bg-[#B4F461]");
   HistoryBtn.classList.remove("hover:bg-[#bffe6b]");
@@ -65,108 +60,112 @@ DonationBtn.addEventListener("click", function () {
   showDonationHistory.classList.add("hidden");
 });
 
-// donation functionality
+// donation card 
 
-// card1
-var noakhaliFundCollectionTotal = 1000;
-document.getElementById("noakhaliBtn").addEventListener("click", function () {
-  const noakhaliDonateTitle = document.getElementById('noakhaliDonateTitle').innerText
+// card-1
+var NoakhaliFundCollectionTotal = 0;
+document.getElementById("NoakhalifBtn").addEventListener("click", function () {
+  const NoakhaliDonateTitle = document.getElementById(
+    "NoakhaliDonateTitle"
+  ).innerText;
 
-  let noakhaliInput = getInputValue("noakhaliInput");
+  let NoakhalifInput = getInputValue("NoakhalifInput");
 
-  if (noakhaliInput > 1000 ) {
-    noakhaliFundCollectionTotal += noakhaliInput;
+  if (NoakhalifInput > 0) {
+    NoakhaliFundCollectionTotal += NoakhalifInput;
 
-    let remingnMyBlance = myBalance - noakhaliInput;
+    let remingnMyBlance = myBalance - NoakhalifInput;
 
-    if (remingnMyBlance < 1000) {
-      document.getElementById("noakhaliInput").value = "";
-      return alert(`account balance is low`);
+    if (remingnMyBlance < 0) {
+      document.getElementById("NoakhalifInput").value = "";
+      return alert(`Your account balance is less than ${NoakhalifInput}`);
     } else {
-      document.getElementById("noakhaliDonateamount").innerText =
-        noakhaliFundCollectionTotal;
+      document.getElementById("NoakhalifDonatioamount").innerText =
+        NoakhaliFundCollectionTotal;
       myBalance = remingnMyBlance;
       document.getElementById("myBalance").innerText = myBalance;
     }
 
     modalopen();
 
-    const div = createElementFun(noakhaliInput,noakhaliDonateTitle);
-  
+    const div = createElementFun(NoakhalifInput, NoakhaliDonateTitle);
+
     showDonationHistory.appendChild(div);
 
-    document.getElementById("noakhaliInput").value = "";
+    document.getElementById("NoakhalifInput").value = "";
   } else {
-    alert("Invalid Donatio Amount");
-    document.getElementById("noakhaliInput").value = "";
+    alert("Invalid Donation Amount");
+    document.getElementById("NoakhalifInput").value = "";
   }
 });
 
 // card-2
-var feniInputFundCollectionTotal = feniDonateamount;
+var fenifInputFundCollectionTotal = feniDonatioamount;
 document.getElementById("fenifBtn").addEventListener("click", function () {
-  const FeniDonateTitle = document.getElementById('FeniDonateTitle').innerText
-  let feniInput = getInputValue("fenifInput");
+  const FeniDonateTitle = document.getElementById("FeniDonateTitle").innerText;
+  let fenifInput = getInputValue("fenifInput");
 
-  if (feniInput > 5000 ) {
-    feniInputFundCollectionTotal += feniInput;
+  if (fenifInput > 0) {
+    fenifInputFundCollectionTotal += fenifInput;
 
-    let remingnMyBlance = myBalance - feniInput;
-    if (remingnMyBlance < 5000) {
-      document.getElementById("feniInput").value = "";
-      return alert(`account balance is low`);
+    let remingnMyBlance = myBalance - fenifInput;
+    if (remingnMyBlance < 0) {
+      document.getElementById("fenifInput").value = "";
+      return alert(`Your account balance is less than ${fenifInput}`);
     } else {
-      document.getElementById("feniDonatioAmount").innerText =
-        feniInputFundCollectionTotal;
+      document.getElementById("feniDonatioamount").innerText =
+        fenifInputFundCollectionTotal;
       myBalance = remingnMyBlance;
       document.getElementById("myBalance").innerText = myBalance;
     }
 
     modalopen();
 
-    const div = createElementFun(feniInput,FeniDonateTitle)
+    const div = createElementFun(fenifInput, FeniDonateTitle);
 
     showDonationHistory.appendChild(div);
 
-    document.getElementById("feniInput").value = "";
+    document.getElementById("fenifInput").value = "";
   } else {
-    alert("Invalid Donatio Amount");
-    document.getElementById("feniInput").value = "";
+    alert("Invalid Donation Amount");
+    document.getElementById("fenifInput").value = "";
   }
 });
-
 
 // card-3
 
 var quotaMovementAmountTotal = quotaMovementAmount;
-document.getElementById("quotaMovementBtn").addEventListener("click", function () {
-  const QuotaMovementTitle = document.getElementById('quotaMovementTitle').innerText
-  console.log(quotaMovementTitle);
-  
-  let quotaMovementAidInput = getInputValue("quotaMovementAid");
+document
+  .getElementById("quotaMovementBtn")
+  .addEventListener("click", function () {
+    const QuotaMovementTitle =
+      document.getElementById("QuotaMovementTitle").innerText;
+    console.log(QuotaMovementTitle);
 
-  if (quotaMovementAidInput > 3000 ) {
-    quotaMovementAmountTotal += quotaMovementAidInput;
+    let quotaMovementAidInput = getInputValue("quotaMovementAid");
 
-    let remingnMyBlance = myBalance - quotaMovementAidInput;
-    if (remingnMyBlance < 3000) {
+    if (quotaMovementAidInput > 0) {
+      quotaMovementAmountTotal += quotaMovementAidInput;
+
+      let remingnMyBlance = myBalance - quotaMovementAidInput;
+      if (remingnMyBlance < 0) {
+        document.getElementById("quotaMovementAid").value = "";
+        alert(`Your account balance is less than ${quotaMovementAidInput}`);
+        return;
+      } else {
+        document.getElementById("quotaMovementAmount").innerText =
+          quotaMovementAmountTotal;
+        myBalance = remingnMyBlance;
+        document.getElementById("myBalance").innerText = myBalance;
+      }
+
+      modalopen();
+      const div = createElementFun(quotaMovementAidInput, QuotaMovementTitle);
+      showDonationHistory.appendChild(div);
+
       document.getElementById("quotaMovementAid").value = "";
-      invalidModal()
-      return ;
     } else {
-      document.getElementById("quotaMovementAmount").innerText =
-      quotaMovementAmountTotal;
-      myBalance = remingnMyBlance;
-      document.getElementById("myBalance").innerText = myBalance;
+      alert("Invalid Donation Amount");
+      document.getElementById("quotaMovementAid").value = "";
     }
-
-    modalopen();
-    const div = createElementFun(quotaMovementAidInput,quotaMovementTitle)
-    showDonationHistory.appendChild(div);
-
-    document.getElementById("quotaMovementAid").value = "";
-  } else {
-    alert("Invalid Donatio Amount");
-    document.getElementById("quotaMovementAid").value = "";
-  }
-});
+  });

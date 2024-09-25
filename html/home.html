@@ -42,7 +42,7 @@
           <div class="navbar-end">
             <button class="flex items-center md:space-x-2 font-semibold">
               <img src="../assets/coin.png" alt="" srcset="" />
-              <span id="myBalance" class="px-1">10500</span> BDT
+              <span id="myBalance" class="px-1">10000</span> BDT
             </button>
           </div>
         </div>
@@ -77,7 +77,7 @@
           1. What is the Document Object Model (DOM)?
         </div>
         <div class="collapse-content">
-          <p>The Document Object Model (DOM) is like a map of a web page. It turns the page into a tree of objects that JavaScript can use to change how the page looks and works. This (DOM) make web pages interactive and dynamic.</p>
+          <p>The Document Object Model (DOM) is a programming interface that represents a webpage’s structure as a tree of objects.</p>
         </div>
       </div>
 
@@ -89,23 +89,10 @@
           2. How do you select an element from the DOM?
         </div>
         <div class="collapse-content">
-          <p>Selecting an element from the DOM (Document Object Model) can be done using many methods in JavaScript.here are the some ways
-            <ul>
-              <li>1.By ID</li>
-              <li>2.By Class Name</li>
-              <li> 3.By Tag Name</li>
-              <li>4.By CSS Selector <br>
-                *Single Element by querySelector it give us fast element <br>
-                *Multiple Elements querySelectorAll it give us all element of this class</li>
-              <li> 5.By Name Attribute</li>
-            </ul>
-            
-            
+          <p>
+            You can select an element from the DOM using methods like getElementById(), querySelector(), or getElementsByClassName().
            
-            
-           
-
-          </p>
+           </p>
         </div>
       </div>
 
@@ -118,12 +105,8 @@
           useful?
         </div>
         <div class="collapse-content">
-          <p>Event delegation is a technique where I add a single event listener to a parent element instead of multiple listeners to each child element. the parent element then handles events for all its children.
-            <br>
-            It’s Useful because
-Fewer Listeners <br>
-Handles New Elements <br>
-Cleaner Code 
+          <p>
+            Event delegation is attaching a single event listener to a parent element to handle events from its child elements, improving performance.
           </p>
         </div>
       </div>
@@ -137,23 +120,8 @@ Cleaner Code
           DOM?
         </div>
         <div class="collapse-content">
-          <p>Manipulating an element’s attributes and styles using the DOM can be done in many ways. Here are some  methods: <br>
+          <p>You manipulate attributes with methods like setAttribute() and access styles via element.style.property or classList methods for classes.
 
-            Get Attribute:
-           
-            
-            const element = document.getElementById("myElement");
-            const value = element.getAttribute("attributeName");
-
-            <br>
-            Set Attribute:
-
-            element.setAttribute("attributeName", "AttributeNewValue");
-            <br>
-            Remove Attribute
-          
-            
-            element.removeAttribute("attributeName");
           </p>
         </div>
       </div>

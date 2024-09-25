@@ -4,10 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- tailwind css -->
+    <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- tailwind css end -->
-    <!-- daisy uli -->
+    <!-- tailwind css cdn end -->
+    <!-- daisy uli cdn -->
 
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -15,16 +15,16 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- daisy uli end -->
+    <!-- daisy uli cdn end -->
     <title>assingment5</title>
   </head>
   <body class="">
-    <!-- navbar  -->
+    <!-- navbar start -->
     <header id="header"  class="border-b  sticky top-0 z-50">
       <div  class="bg-[#f9f7f3f2]">
         <div class="navbar container mx-auto py-5 ">
           <div class="navbar-start">
-            <a href="./html/blog.html">
+            <a href="./html/home.html">
               <button
                 class="btn px-5 md:px-8 font-bold bg-[#B4F461] hover:bg-[#B4F461]"
               >
@@ -70,7 +70,7 @@
 
     <!-- main -->
     <main class="container mx-auto mt-10">
-      <div id="boxContant">
+      <div id="box-contants">
         <!-- card 1 -->
         <div class="card lg:card-side md:space-x-10 bg-base-100 border mx-2 p-5">
           <figure>
@@ -81,11 +81,11 @@
               class="bg-[#1111110D] md:px-4 my-4 flex items-center md:space-x-2 p-3 rounded-md"
             >
               <img src="./assets/coin.png" alt="" srcset="" />
-              <p id="noakhaliDonateAmount" class="px-1">1000</p>
+              <p id="NoakhalifDonatioamount" class="px-1">1200</p>
               BDT
             </button>
 
-            <h1 id="noakhaliDonateTitle" class="font-bold pb-3">
+            <h1 id="NoakhaliDonateTitle" class="font-bold pb-3">
               Donate for Flood at Noakhali, Bangladesh
             </h1>
             <p class="text-justify">
@@ -93,14 +93,14 @@
             </p>
 
             <input
-              id="noakhaliInput"
+              id="NoakhalifInput"
               type="text"
               placeholder="Write Donation Amount"
               class="input my-4 input-bordered w-full"
             />
 
             <button
-              id="noakhaliBtn"
+              id="NoakhalifBtn"
               class="block btn hover:bg-[#B4F461] bg-[#B4F461] w-full py-3 px-2 rounded-lg font-semibold"
             >
               Donate Now
@@ -120,11 +120,11 @@
               class="bg-[#1111110D] px-4 my-4 flex items-center space-x-2 p-3 rounded-md"
             >
               <img src="./assets/coin.png" alt="" srcset="" />
-              <p id="feniDonateAmount" class="px-1">5000</p>
+              <p id="feniDonatioamount" class="px-1">3000</p>
               BDT
             </button>
 
-            <h1 id="feniDonateTitle" class="font-bold pb-3">
+            <h1 id="FeniDonateTitle" class="font-bold pb-3">
               Donate for Flood Relief in Feni,Bangladesh
             </h1>
             <p class="text-justify">
@@ -132,14 +132,14 @@
             </p>
 
             <input
-              id="feniInput"
+              id="fenifInput"
               type="text"
               placeholder="Write Donation Amount"
               class="input my-4 input-bordered w-full"
             />
 
             <button
-              id="feniBtn"
+              id="fenifBtn"
               class="block btn hover:bg-[#B4F461] bg-[#B4F461] w-full py-3 px-2 rounded-lg font-semibold"
             >
               Donate Now
@@ -163,15 +163,15 @@
               class="bg-[#1111110D] px-4 my-4 flex items-center space-x-2 p-3 rounded-md"
             >
               <img src="./assets/coin.png" alt="" srcset="" />
-              <p id="quotaMovementAmount" class="px-1">3000</p>
+              <p id="quotaMovementAmount" class="px-1">5000</p>
               BDT
             </button>
 
-            <h1 id="quotaMovementTitle" class="font-bold pb-3">
+            <h1 id="QuotaMovementTitle" class="font-bold pb-3">
               Aid for Injured in the Quota Movement
             </h1>
-            <p class="text-justify">
-              we are Bangladeshi student doing the Quota Movement protests. and Support those injured in the Quota Movement protests. Your aid will provide essential medical care, rehabilitation, and support services to help them recover. Every contribution ensures that the injured receive the necessary treatment and assistance to rebuild their lives and regain their health.
+            <p class="text-justify">"Aid for Injured in the Quota Movement" refers to providing medical support, financial assistance, or rehabilitation services to individuals hurt during protests or clashes related to reservation policies or affirmative action demands.
+
             </p>
 
             <input id="quotaMovementAid"
@@ -189,13 +189,13 @@
         </div>
       </div>
 
-      <!-- History div  -->
+      <!-- History div start -->
       <div id="showDonationHistory" class="hidden space-y-4 p-4"></div>
       <!-- History div end -->
 
       <!-- modal start  -->
-      <!-- Successful model -->
-      <dialog id="modal_1" class="modal">
+      
+      <dialog id="my_modal_1" class="modal">
         <div class="modal-box text-center">
           <h3 class=" text-2xl md:text-4xl text-green-500 font-bold">Congrates!</h3>
           <div class="flex justify-center mt-3">
@@ -205,36 +205,19 @@
           <h1 class="font-bold">Successfully</h1>
           <div class="modal-action flex-col justify-center">
             <form method="dialog" class="text-center">
-              <!-- if there is a button in form, it will close the modal -->
               <button class="btn w-1/2">Close Confirmation</button>
             </form>
           </div>
         </div>
       </dialog>
+      <!-- modal end  -->
 
-      <!-- alart model -->
-      <dialog id="modal_2" class="modal">
-        <div class="modal-box text-center">
-          <h3 class="text-2xl md:text-4xl text-rose-500 font-bold">Sorry!</h3>
-          <div class="flex justify-center mt-3">
-            <img src="./assets/icons8-error-48.png" alt="" srcset="" />
-          </div>
-          <p class="py-4">Invalid input</p>
-          <h1 class="font-bold"> Donation Failed</h1>
-          <div class="modal-action flex-col justify-center">
-            <form method="dialog" class="text-center">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn w-1/2">Close Confirmation</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
-      <!-- modal end -->
 
     </main>
     <!-- main end -->
 
-    <footer class="bg-orange-50 h-12 " ></footer>
+    <footer class="w-full h-[100px] bg-orange-100 mt-10"></footer>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
